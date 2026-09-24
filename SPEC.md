@@ -1,6 +1,6 @@
 # Bucketlist File Format
 
-Version 0.1
+Version 1.0
 
 A `.bucketlist` file is a UTF-8 encoded plain-text file containing
 a list of bucket-list items.
