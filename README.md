@@ -13,7 +13,7 @@ bucket init                         # create ~/.bucketlist
 bucket add "Ride a hot-air balloon"
 bucket list                         # show numbered items
 bucket kick 1                       # mark item 1 complete
-bucket remove 1                     # delete item 1
+bucket rm 1                         # delete item 1
 ```
 
 Your list lives in `~/.bucketlist`. It's plain UTF-8 text: one item per line,

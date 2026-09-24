@@ -29,7 +29,7 @@ enum Commands {
     Kick { item: NonZeroUsize },
 
     /// Remove an item from your bucket
-    Remove { item: NonZeroUsize },
+    Rm { item: NonZeroUsize },
 }
 
 fn main() -> std::io::Result<()> {
@@ -39,7 +39,7 @@ fn main() -> std::io::Result<()> {
         Commands::Init => commands::init()?,
         Commands::Add { item } => commands::add(&item)?,
         Commands::Kick { item } => commands::kick(item)?,
-        Commands::Remove { item } => commands::remove(item)?,
+        Commands::Rm { item } => commands::remove(item)?,
         Commands::List => commands::list()?,
     }
 
