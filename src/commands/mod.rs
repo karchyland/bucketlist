@@ -25,12 +25,13 @@ pub fn init() -> io::Result<()> {
 }
 
 pub fn add(item: &str) -> io::Result<()> {
-    println!("adding item: {item}");
     let path = bucket_path()?;
 
     let mut file = OpenOptions::new().append(true).open(path)?;
 
     writeln!(file, "{item}")?;
+
+    println!("✅ Added item: {item}");
 
     Ok(())
 }
@@ -54,7 +55,7 @@ pub fn kick(index: NonZeroUsize) -> io::Result<()> {
 
     item.push_str(",x");
 
-    println!("Kicked: {}", item.trim_end_matches(",x"));
+    println!("🎉 Kicked: {}", item.trim_end_matches(",x"));
 
     fs::write(&path, format!("{}\n", items.join("\n")))?;
 
@@ -77,7 +78,7 @@ pub fn remove(index: NonZeroUsize) -> io::Result<()> {
 
     fs::write(&path, format!("{}\n", items.join("\n")))?;
 
-    println!("Removed: {}", removed.trim_end_matches(",x"));
+    println!("❌ Removed: {}", removed.trim_end_matches(",x"));
 
     Ok(())
 }
