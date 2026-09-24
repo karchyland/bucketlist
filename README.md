@@ -2,7 +2,13 @@
 
 A devastatingly simple bucket list CLI and `.bucketlist` file format.
 
-Install from this repo with [Rust](https://www.rust-lang.org/tools/install):
+Install from [crates.io](https://crates.io/crates/bucketlist) with [Rust](https://www.rust-lang.org/tools/install):
+
+```sh
+cargo install bucketlist
+```
+
+Or install from this repo:
 
 ```sh
 cargo install --path .
